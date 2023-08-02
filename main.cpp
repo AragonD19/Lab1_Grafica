@@ -36,11 +36,10 @@ void render() {
     clear();
 
     Color polygonColor(255, 255, 255);
-    Color fillColor(255, 255, 0);
+    Color fillColor(255, 0, 0);
 
     std::vector<Vertex2> polygonVertices = {
-            {165, 380}, {185, 360}, {180, 330}, {207, 345}, {233, 330},
-            {230, 360}, {250, 380}, {220, 385}, {205, 410}, {193, 383}
+            {377, 249}, {411, 197}, {436, 249}
     };
 
     // Dibujar el polígono sin relleno

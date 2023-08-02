@@ -35,21 +35,39 @@ void point(Vertex2 punto, Color color) {
 void render() {
     clear();
 
-    Color polygonColor(255, 255, 255);
-    Color fillColor(255, 255, 0);
+    Color polygonColor1(255, 255, 255);
+    Color fillColor1(0, 255, 0);
 
-    std::vector<Vertex2> polygonVertices = {
-            {165, 380}, {185, 360}, {180, 330}, {207, 345}, {233, 330},
-            {230, 360}, {250, 380}, {220, 385}, {205, 410}, {193, 383}
+    // Nuevo primer polígono
+    std::vector<Vertex2> polygonVertices1 = {
+            {413, 177}, {448, 159}, {502, 88}, {553, 53}, {535, 36}, {676, 37},
+            {660, 52}, {750, 145}, {761, 179}, {672, 192}, {659, 214}, {615, 214},
+            {632, 230}, {580, 230}, {597, 215}, {552, 214}, {517, 144}, {466, 180}
     };
 
-    // Dibujar el polígono sin relleno
-    framebuffer.setCurrentColor(polygonColor);
-    drawPolygon(polygonVertices);
+    // Dibujar el nuevo primer polígono sin relleno
+    framebuffer.setCurrentColor(polygonColor1);
+    drawPolygon(polygonVertices1);
 
-    // Rellenar el polígono con el color de relleno
-    framebuffer.setCurrentColor(fillColor);
-    fillPolygon(polygonVertices, fillColor, polygonColor, framebuffer.getClearColor());
+    // Rellenar el nuevo primer polígono con el color de relleno
+    framebuffer.setCurrentColor(fillColor1);
+    fillPolygon(polygonVertices1, fillColor1, polygonColor1, framebuffer.getClearColor());
+
+    Color polygonColor2(255, 255, 255);
+    Color fillColor2(0, 255, 0);
+
+    // Nuevo segundo polígono
+    std::vector<Vertex2> polygonVertices2 = {
+            {682, 175}, {708, 120}, {735, 148}, {739, 170}
+    };
+
+    // Dibujar el nuevo segundo polígono sin relleno
+    framebuffer.setCurrentColor(polygonColor2);
+    drawPolygon(polygonVertices2);
+
+    // Rellenar el nuevo segundo polígono con el color de relleno
+    framebuffer.setCurrentColor(fillColor2);
+    fillPolygon(polygonVertices2, fillColor2, polygonColor2, framebuffer.getClearColor());
 
     renderBuffer();
 }
